@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>smoke-ui-contract-0429 - Ana Sayfa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "on-primary-container": "#eeefff",
+                    "primary-container": "#2563eb",
+                    "secondary-container": "#00a572",
+                    "on-surface": "#e1e2ed",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "background": "#11131b",
+                    "inverse-on-surface": "#2e3039",
+                    "surface-dim": "#11131b",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-tertiary-fixed": "#360f00",
+                    "surface-tint": "#b4c5ff",
+                    "on-primary": "#002a78",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary": "#581e00",
+                    "on-background": "#e1e2ed",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0c0e16",
+                    "surface": "#11131b",
+                    "surface-variant": "#32343d",
+                    "surface-container-high": "#282a32",
+                    "surface-container-highest": "#32343d",
+                    "secondary-fixed": "#6ffbbe",
+                    "surface-bright": "#373942",
+                    "on-surface-variant": "#c3c6d7",
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-surface": "#e1e2ed",
+                    "tertiary-container": "#bc4800",
+                    "on-secondary-fixed-variant": "#005236",
+                    "inverse-primary": "#0053db",
+                    "surface-container-low": "#191b23",
+                    "secondary": "#4edea3",
+                    "outline": "#8d90a0",
+                    "on-secondary-container": "#00311f",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container": "#1d1f27",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary-container": "#ffede6",
+                    "on-secondary": "#003824",
+                    "primary": "#b4c5ff",
+                    "outline-variant": "#434655",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "primary-fixed": "#dbe1ff",
+                    "tertiary": "#ffb596"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "2xl": "32px",
+                    "3xl": "48px",
+                    "xl": "24px",
+                    "md": "12px",
+                    "lg": "16px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "h3": [
+                            "Inter"
+                    ],
+                    "h1": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "h2": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h3": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "h1": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "h2": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Shared Styles */
+        body {
+            background-color: #0F172A; /* Base Background */
+            color: #e1e2ed;
+        }
+        .surface-card {
+            background-color: #1E293B; /* Surface */
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+        }
+        .input-inset {
+            background-color: #0F172A;
+            border: 1px solid #334155;
+        }
+        .input-inset:focus-within {
+            border-color: #2563EB;
+        }
+    </style>
+</head>
+<body class="bg-[#0F172A] min-h-screen text-on-background font-body-md text-body-md pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-slate-950/80 backdrop-blur-md text-blue-600 font-sans antialiased text-slate-200 docked full-width top-0 border-b border-slate-800 flat no shadows flex justify-between items-center w-full px-4 h-14 sticky z-40">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold tracking-tight text-white">smoke-ui-contract-0429</span>
+</div>
+<!-- Desktop Nav Items (Hidden on mobile) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-blue-500 font-semibold hover:bg-slate-800/50 transition-colors active:opacity-80 px-3 py-1.5 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="home">home</span>
+                Ana Sayfa
+            </a>
+<a class="text-slate-400 hover:bg-slate-800/50 transition-colors active:opacity-80 px-3 py-1.5 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="equalizer">equalizer</span>
+                İstatistikler
+            </a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-slate-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-800/50 transition-colors text-slate-400 hover:text-slate-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-5xl mx-auto p-4 md:p-lg lg:p-xl space-y-xl md:space-y-2xl">
+<!-- Dashboard Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<h1 class="font-h1 text-h1 text-white">Günlük Özet</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Bugün 12 Ekim, Perşembe. İyi çalışmalar.</p>
+</div>
+<!-- Habit Form -->
+<form class="w-full md:w-auto flex items-center gap-sm">
+<div class="input-inset flex items-center rounded-lg px-md h-[40px] md:h-[48px] w-full md:w-64 transition-colors">
+<span class="material-symbols-outlined text-outline-variant mr-sm text-[20px]" data-icon="add_task">add_task</span>
+<input class="bg-transparent border-none focus:ring-0 text-white w-full h-full text-body-sm placeholder:text-outline-variant p-0" placeholder="Yeni alışkanlık ekle..." type="text"/>
+</div>
+<button class="bg-primary-container text-white h-[40px] md:h-[48px] px-lg rounded-lg font-body-sm font-medium hover:bg-blue-500 transition-colors flex-shrink-0" type="button">
+                    Ekle
+                </button>
+</form>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Stat Card 1 -->
+<div class="surface-card rounded-xl p-lg flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md opacity-10">
+<span class="material-symbols-outlined text-[64px]" data-icon="checklist">checklist</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Toplam Alışkanlık</span>
+<div class="flex items-end gap-sm">
+<span class="font-h1 text-[40px] leading-none text-white font-bold">12</span>
+<span class="font-body-sm text-body-sm text-outline mb-1">aktif</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="surface-card rounded-xl p-lg flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md opacity-10">
+<span class="material-symbols-outlined text-[64px] text-secondary-container" data-icon="task_alt">task_alt</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Bugün Tamamlanan</span>
+<div class="flex items-end gap-sm">
+<span class="font-h1 text-[40px] leading-none text-white font-bold text-secondary-fixed">5</span>
+<span class="font-body-sm text-body-sm text-outline mb-1">/ 8 planlanan</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="surface-card rounded-xl p-lg flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md opacity-10">
+<span class="material-symbols-outlined text-[64px] text-primary-container" data-icon="donut_large">donut_large</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Tamamlanma Oranı (%)</span>
+<div class="flex items-center gap-md h-full mt-2">
+<!-- Progress Ring CSS -->
+<div class="relative w-16 h-16 flex-shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-slate-800" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="62, 100" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-body-sm text-body-sm font-bold text-white">62%</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-surface-tint">İyi gidiyorsun</span>
+<span class="font-label-caps text-[10px] text-outline-variant">+5% dünden</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="space-y-lg">
+<!-- Filter Bar -->
+<div class="flex items-center justify-between border-b border-surface-variant pb-md">
+<h2 class="font-h3 text-h3 text-white hidden md:block">Günlük Görevler</h2>
+<div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-lg w-full md:w-auto">
+<button class="flex-1 md:flex-none px-lg py-1.5 rounded bg-surface-variant text-white font-body-sm text-body-sm font-medium shadow-sm">Tümü</button>
+<button class="flex-1 md:flex-none px-lg py-1.5 rounded text-on-surface-variant hover:text-white font-body-sm text-body-sm transition-colors">Tamamlanan</button>
+<button class="flex-1 md:flex-none px-lg py-1.5 rounded text-on-surface-variant hover:text-white font-body-sm text-body-sm transition-colors">Bekleyen</button>
+</div>
+</div>
+<!-- Habit List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Completed Habit Card -->
+<div class="surface-card rounded-xl p-md flex items-center gap-md group hover:border-surface-variant transition-colors">
+<button class="w-6 h-6 rounded-full bg-secondary-container text-white flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</button>
+<div class="flex-1 min-w-0">
+<h3 class="font-body-md text-body-md text-outline line-through truncate">Sabah koşusu (30 dk)</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded border border-[#334155] text-[10px] font-label-caps text-outline-variant">Sağlık</span>
+<span class="text-[10px] text-secondary-fixed flex items-center gap-1"><span class="material-symbols-outlined text-[12px]" data-icon="local_fire_department">local_fire_department</span> 5 Gün</span>
+</div>
+</div>
+</div>
+<!-- Pending Habit Card -->
+<div class="surface-card rounded-xl p-md flex items-center gap-md group hover:border-surface-variant transition-colors border-l-2 border-l-primary-container">
+<button class="w-6 h-6 rounded-full border-2 border-outline hover:border-primary-container flex items-center justify-center flex-shrink-0 transition-colors">
+</button>
+<div class="flex-1 min-w-0">
+<h3 class="font-body-md text-body-md text-white font-medium truncate">Kitap Oku (20 sayfa)</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded border border-[#334155] text-[10px] font-label-caps text-outline-variant">Gelişim</span>
+</div>
+</div>
+</div>
+<!-- Pending Habit Card 2 -->
+<div class="surface-card rounded-xl p-md flex items-center gap-md group hover:border-surface-variant transition-colors border-l-2 border-l-primary-container">
+<button class="w-6 h-6 rounded-full border-2 border-outline hover:border-primary-container flex items-center justify-center flex-shrink-0 transition-colors">
+</button>
+<div class="flex-1 min-w-0">
+<h3 class="font-body-md text-body-md text-white font-medium truncate">Su İç (2 Litre)</h3>
+<div class="flex items-center gap-2 mt-1">
+<div class="flex gap-1">
+<div class="w-4 h-4 rounded-sm bg-primary-container/20 border border-primary-container/50"></div>
+<div class="w-4 h-4 rounded-sm bg-primary-container/20 border border-primary-container/50"></div>
+<div class="w-4 h-4 rounded-sm border border-[#334155]"></div>
+<div class="w-4 h-4 rounded-sm border border-[#334155]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pending Habit Card 3 -->
+<div class="surface-card rounded-xl p-md flex items-center gap-md group hover:border-surface-variant transition-colors">
+<button class="w-6 h-6 rounded-full border-2 border-outline hover:border-primary-container flex items-center justify-center flex-shrink-0 transition-colors">
+</button>
+<div class="flex-1 min-w-0">
+<h3 class="font-body-md text-body-md text-white font-medium truncate">Meditasyon (10 dk)</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded border border-[#334155] text-[10px] font-label-caps text-outline-variant">Zihin</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-slate-900 text-blue-500 text-[11px] font-medium Inter docked full-width bottom-0 border-t border-slate-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe px-6">
+<a class="flex flex-col items-center justify-center text-blue-500 bg-blue-500/10 rounded-xl px-4 py-1 hover:text-slate-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+            Ana Sayfa
+        </a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 hover:text-slate-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="equalizer">equalizer</span>
+            İstatistikler
+        </a>
+</nav>
+</body></html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>İstatistikler - smoke-ui-contract-0429</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary-container": "#eeefff",
+                        "primary-container": "#2563eb",
+                        "secondary-container": "#00a572",
+                        "on-surface": "#e1e2ed",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "background": "#11131b",
+                        "inverse-on-surface": "#2e3039",
+                        "surface-dim": "#11131b",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary": "#002a78",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary": "#581e00",
+                        "on-background": "#e1e2ed",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface": "#11131b",
+                        "surface-variant": "#32343d",
+                        "surface-container-high": "#282a32",
+                        "surface-container-highest": "#32343d",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-bright": "#373942",
+                        "on-surface-variant": "#c3c6d7",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-surface": "#e1e2ed",
+                        "tertiary-container": "#bc4800",
+                        "on-secondary-fixed-variant": "#005236",
+                        "inverse-primary": "#0053db",
+                        "surface-container-low": "#191b23",
+                        "secondary": "#4edea3",
+                        "outline": "#8d90a0",
+                        "on-secondary-container": "#00311f",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-container": "#1d1f27",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-container": "#ffede6",
+                        "on-secondary": "#003824",
+                        "primary": "#b4c5ff",
+                        "outline-variant": "#434655",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary": "#ffb596"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "2xl": "32px",
+                        "3xl": "48px",
+                        "xl": "24px",
+                        "md": "12px",
+                        "lg": "16px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "h3": ["Inter"],
+                        "h1": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-slate-950/80 backdrop-blur-md font-sans antialiased text-slate-200 border-b border-slate-800 flex justify-between items-center w-full px-4 h-14 sticky top-0 z-40 hidden md:flex">
+<div class="text-lg font-bold tracking-tight text-white">smoke-ui-contract-0429</div>
+<nav class="flex gap-6 h-full items-center">
+<a class="text-slate-400 hover:bg-slate-800/50 transition-colors h-full flex items-center px-2 active:opacity-80" href="#">Ana Sayfa</a>
+<a class="text-blue-500 font-semibold hover:bg-slate-800/50 transition-colors h-full flex items-center px-2 active:opacity-80" href="#">İstatistikler</a>
+</nav>
+<div class="flex gap-4">
+<button class="text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors p-2 rounded-full active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="text-slate-400 hover:text-slate-200 hover:bg-slate-800/50 transition-colors p-2 rounded-full active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Mobile Top Header (Just for brand on mobile) -->
+<header class="md:hidden bg-slate-950/80 backdrop-blur-md flex justify-between items-center w-full px-4 h-14 sticky top-0 z-40 border-b border-slate-800">
+<div class="text-lg font-bold tracking-tight text-white">smoke-ui-contract-0429</div>
+<div class="flex gap-2">
+<button class="text-slate-400 p-2"><span class="material-symbols-outlined">settings</span></button>
+<button class="text-slate-400 p-2"><span class="material-symbols-outlined">notifications</span></button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 lg:px-lg py-xl md:py-2xl flex flex-col gap-xl">
+<!-- Page Title -->
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">İstatistikler</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Haftalık ve aylık performans özetiniz.</p>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Weekly Summary Chart -->
+<div class="bg-surface border border-outline-variant rounded-xl p-lg col-span-1 md:col-span-2 lg:col-span-2 flex flex-col shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2),0_2px_4px_-1px_rgba(0,0,0,0.1)]">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-h3 text-h3 text-on-surface">Haftalık Tamamlama</h2>
+<span class="font-label-caps text-label-caps text-secondary px-2 py-1 border border-secondary-container rounded-DEFAULT">%85</span>
+</div>
+<div class="flex-1 flex items-end justify-between gap-2 mt-4 pt-4 border-t border-surface-variant">
+<!-- Fake Bar Chart -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary-container rounded-t-sm transition-all duration-300 h-16 group-hover:bg-primary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Pzt</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary-container rounded-t-sm transition-all duration-300 h-24 group-hover:bg-primary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Sal</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-secondary-container rounded-t-sm transition-all duration-300 h-32 group-hover:bg-secondary-fixed"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Çar</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary-container rounded-t-sm transition-all duration-300 h-20 group-hover:bg-primary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Per</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary-container rounded-t-sm transition-all duration-300 h-28 group-hover:bg-primary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Cum</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-surface-variant rounded-t-sm transition-all duration-300 h-8 group-hover:bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Cts</span>
+</div>
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-surface-variant rounded-t-sm transition-all duration-300 h-4 group-hover:bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Paz</span>
+</div>
+</div>
+</div>
+<!-- Streak Cards Stack -->
+<div class="flex flex-col gap-lg col-span-1">
+<!-- Current Streak -->
+<div class="bg-surface border border-outline-variant rounded-xl p-lg flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2),0_2px_4px_-1px_rgba(0,0,0,0.1)]">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Mevcut Seri</p>
+<p class="font-h2 text-h2 text-secondary flex items-baseline gap-1">
+                            12 <span class="font-body-sm text-body-sm text-on-surface-variant">Gün</span>
+</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+<!-- Longest Streak -->
+<div class="bg-surface border border-outline-variant rounded-xl p-lg flex items-center justify-between shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2),0_2px_4px_-1px_rgba(0,0,0,0.1)]">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">En Uzun Seri</p>
+<p class="font-h2 text-h2 text-on-surface flex items-baseline gap-1">
+                            45 <span class="font-body-sm text-body-sm text-on-surface-variant">Gün</span>
+</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+</div>
+</div>
+<!-- Category Breakdown -->
+<div class="bg-surface border border-outline-variant rounded-xl p-lg col-span-1 md:col-span-2 lg:col-span-3 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2),0_2px_4px_-1px_rgba(0,0,0,0.1)]">
+<h2 class="font-h3 text-h3 text-on-surface mb-md">Kategori Dağılımı</h2>
+<div class="space-y-4">
+<!-- Category 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Sağlık</span>
+<span class="font-body-sm text-body-sm text-secondary-fixed-dim">%90</span>
+</div>
+<div class="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Category 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">İş</span>
+<span class="font-body-sm text-body-sm text-primary">%75</span>
+</div>
+<div class="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Category 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-sm text-body-sm text-on-surface">Öğrenme</span>
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim">%40</span>
+</div>
+<div class="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 40%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-slate-900 text-[11px] font-medium Inter border-t border-slate-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe px-6">
+<a class="flex flex-col items-center justify-center text-slate-500 px-4 py-1 hover:text-slate-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+            Ana Sayfa
+        </a>
+<a class="flex flex-col items-center justify-center text-blue-500 bg-blue-500/10 rounded-xl px-4 py-1 hover:text-slate-300 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">equalizer</span>
+            İstatistikler
+        </a>
+</nav>
+</body></html>

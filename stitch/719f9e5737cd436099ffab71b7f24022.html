@@ -1,0 +1,146 @@
+# 1. Genel Bakış
+
+smoke-ui-contract-0429, basit bir alışkanlık takip uygulamasıdır. Kullanıcılar günlük alışkanlıklarını ekleyebilir, tamamladıklarını işaretleyebilir, günlük görünümde filtreleyebilir ve istatistik kartı üzerinden ilerlemelerini takip edebilir. Uygulama tamamen tarayıcıda çalışır; localStorage ile veriler kalıcıdır. Arayüz dili Türkçedir. Hedef kitle: günlük rutinlerini dijital ortamda basitçe takip etmek isteyen bireysel kullanıcılar.
+
+# 2. Hedefler
+
+1. Kullanıcının 30 saniye içinde ilk alışkanlığını ekleyebilmesi.
+2. Tüm butonların gerçek, anında görülebilir davranış üretmesi.
+3. localStorage ile sayfa yenilense bile verinin kaybolmaması.
+4. Mobil cihazlarda (320px+) sorunsuz kullanılabilir olması.
+5. Ekran geçişlerinin 100ms altında kalması (tek sayfa uygulama).
+6. Erişilebilirlik standartlarına (WCAG 2.1 AA) tam uyum.
+
+# 3. Tech Stack Detayı
+
+- Framework: React 18
+- Build: Vite
+- Styling: Tailwind CSS
+- State: useState + useReducer (basit global state yeterli; Zustand/Redux gereksiz)
+- Storage: localStorage (JSON serialize)
+- Routing: React Router (minimal: Ana Sayfa + İstatistikler + Hata sayfası)
+- Icons: Lucide React
+
+# 4. Fonksiyonel Gereksinimler
+
+## 4.1 Alışkanlık Ekleme
+- Girdi: metin alanı (max 100 karakter), zorunlu.
+- Hata: "Lütfen alışkanlık adı girin" (boş gönderimde).
+- Başarı: liste anında güncellenir, input temizlenir.
+- Aynı isimde alışkanlık eklenemez; hata: "Bu alışkanlık zaten mevcut."
+
+## 4.2 Tamamlama İşaretleme
+- Her alışkanlık kartında "Tamamla" butonu.
+- Tıklama: kartın görsel durumu değişir (strike-through + yeşil ikon), istatistikler anında güncellenir.
+- Tekrar tıklama: tamamlama geri alınabilir.
+
+## 4.3 Günlük Filtreleme
+- Filtre seçenekleri: "Tümü", "Tamamlanan", "Tamamlanmayan".
+- Default: "Tümü".
+- Filtre değişimi anında liste yeniden render edilir; sayfa yenilenmez.
+
+## 4.4 İstatistik Kartı
+- Gösterge 1: Toplam alışkanlık sayısı.
+- Gösterge 2: Bugün tamamlanan sayısı.
+- Gösterge 3: Tamamlanma yüzdesi (%).
+- Kartlar sayfanın üst kısmında sabit, her değişiklikte anında güncellenir.
+
+# 5. Veri Modeli
+
+```typescript
+interface Habit {
+  id: string;          // crypto.randomUUID()
+  title: string;       // max 100 karakter
+  completed: boolean;    // default false
+  createdAt: string;     // ISO 8601
+  completedAt?: string;  // ISO 8601, opsiyonel
+}
+```
+
+localStorage key: `habits_v1`
+Format: `Habit[]` JSON string.
+
+# 6. UI/UX Gereksinimleri
+
+## 6.1 Design System Seçimi
+- Aesthetic: minimal
+- Renk Paleti:
+  - Primary: #2563EB (blue-600)
+  - Secondary: #10B981 (emerald-500)
+  - Background: #F8FAFC (slate-50)
+  - Surface: #FFFFFF
+  - Text: #0F172A (slate-900)
+  - Border: #E2E8F0 (slate-200)
+  - Success: #10B981
+  - Error: #EF4444
+- Tipografi: Heading: Inter (600), Body: Inter (400)
+- Icon Library: Lucide React (asla emoji kullanılmaz)
+
+## 6.2 Spacing & Components
+- Spacing scale: 4/8/12/16/24/32/48 px
+- Border radius: kartlar 12px, butonlar 8px, inputlar 8px
+- Shadow: kartlar `shadow-sm`, hover'da `shadow-md`
+- Buton pattern: Primary (filled), Secondary (outlined), Danger (text)
+- Kart pattern: white surface, 12px radius, 16px padding, 1px border
+
+# 7. Non-Functional Requirements
+
+## 7.1 Performans
+- İlk yükleme < 2 saniye (Vite + lazy loading yok, SPA)
+- Sayfa geçişi < 100ms
+- Bundle size hedefi: < 150KB gzipped
+
+## 7.2 Erişilebilirlik (WCAG 2.1 AA)
+- Klavye navigasyonu: Tab sırası input → ekle butonu → liste → filtreler.
+- Screen reader: her buton ve input için `aria-label` zorunlu.
+- Kontrast: metin/arka plan >= 4.5:1.
+- Focus state: tüm interaktif elementlerde `ring-2 ring-blue-500`.
+- Touch hedefleri: butonlar minimum 44x44 px.
+
+## 7.3 Tarayıcı Desteği
+- Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- iOS Safari 14+, Android Chrome 90+
+- Responsive: mobile 320px+ → desktop 1920px+
+
+# 8. Proje Yapısı
+
+```
+src/
+├── components/
+│   ├── HabitCard.tsx
+│   ├── HabitForm.tsx
+│   ├── FilterBar.tsx
+│   ├── StatsCard.tsx
+│   └── EmptyState.tsx
+├── screens/
+│   ├── AnaSayfa.tsx
+│   ├── Istatistikler.tsx
+│   └── HataSayfasi.tsx
+├── hooks/
+│   └── useLocalStorage.ts
+├── utils/
+│   └── helpers.ts
+├── types/
+│   └── habit.ts
+├── App.tsx
+└── main.tsx
+```
+
+# 9. Window State
+
+```javascript
+window.app = {
+  state: 'idle',        // idle | loading | error
+  habitCount: 0,
+  completedToday: 0,
+  filter: 'all'         // all | completed | incomplete
+}
+```
+
+# 10. Ekranlar
+
+| # | Ekran Adı | Tür | Açıklama |
+|---|-----------|-----|----------|
+| 1 | Ana Sayfa | dashboard | Alışkanlık listesi, ekleme formu, filtreleme, istatistik kartı |
+| 2 | İstatistikler | analytics | Detaylı tamamlanma grafikleri, haftalık özet, streak bilgisi |
+| 3 | Hata Sayfası | error | Bilinmeyen route veya localStorage hatası durumunda fallback ekran |
