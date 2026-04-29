@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react';
+
 interface EmptyStateProps {
   message?: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }
 
 export function EmptyState({ message = 'Henüz bir alışkanlık eklenmemiş.', icon }: EmptyStateProps) {

@@ -1,3 +1,5 @@
+import type { Habit } from '../types/habit';
+
 export function generateId(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
     return crypto.randomUUID();
@@ -11,5 +13,5 @@ export function formatDateISO(date: Date): string {
 
 export function calculateCompletionRate(completed: number, total: number): number {
   if (total <= 0) return 0;
-  return Math.round((completed / total) * 100);
+  return Math.min(100, Math.max(0, Math.round((completed / total) * 100)));
 }
