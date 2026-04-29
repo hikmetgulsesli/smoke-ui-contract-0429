@@ -1,0 +1,305 @@
+[
+  {
+    "screenId": "e3278b8ca6ce41cf90197515d92f44ed",
+    "screenTitle": "Hata Sayfası - 404",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 113
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 116
+      },
+      {
+        "type": "button",
+        "label": "Ana Sayfaya Dön",
+        "line": 137
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 113
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 116
+      },
+      {
+        "type": "button",
+        "label": "Ana Sayfaya Dön",
+        "line": 137
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "9bdfd17f22394f6c80080dba5ada6a5d",
+    "screenTitle": "İstatistikler - İlerleme Analizi",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 113
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 114
+      },
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 246
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 250
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 130
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 113
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 114
+      },
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 246
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 250
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 130
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 8,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "efd3a0ca22c54cd5a8e014390c3200fe",
+    "screenTitle": "Ana Sayfa - Alışkanlık Takibi",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 342
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 346
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "Ekle",
+        "line": 220
+      },
+      {
+        "type": "button",
+        "label": "Tümü",
+        "line": 279
+      },
+      {
+        "type": "button",
+        "label": "Tamamlanan",
+        "line": 280
+      },
+      {
+        "type": "button",
+        "label": "Bekleyen",
+        "line": 281
+      },
+      {
+        "type": "button",
+        "label": "check",
+        "line": 288
+      },
+      {
+        "type": "input",
+        "label": "Yeni alışkanlık ekle...",
+        "inputType": "text",
+        "placeholder": "Yeni alışkanlık ekle...",
+        "line": 218
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 215
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Ana Sayfa",
+        "href": "#",
+        "line": 342
+      },
+      {
+        "type": "link",
+        "label": "İstatistikler",
+        "href": "#",
+        "line": 346
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "Ekle",
+        "line": 220
+      },
+      {
+        "type": "button",
+        "label": "Tümü",
+        "line": 279
+      },
+      {
+        "type": "button",
+        "label": "Tamamlanan",
+        "line": 280
+      },
+      {
+        "type": "button",
+        "label": "Bekleyen",
+        "line": 281
+      },
+      {
+        "type": "button",
+        "label": "check",
+        "line": 288
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Yeni alışkanlık ekle...",
+        "inputType": "text",
+        "placeholder": "Yeni alışkanlık ekle...",
+        "line": 218
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 13,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
