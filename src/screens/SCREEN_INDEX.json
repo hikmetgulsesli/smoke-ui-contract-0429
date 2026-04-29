@@ -1,0 +1,29 @@
+[
+  {
+    "screenId": "e3278b8ca6ce41cf90197515d92f44ed",
+    "title": "Hata Sayfası - 404",
+    "componentName": "HataSayfasi404",
+    "file": "src/screens/HataSayfasi404.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 0
+  },
+  {
+    "screenId": "9bdfd17f22394f6c80080dba5ada6a5d",
+    "title": "İstatistikler - İlerleme Analizi",
+    "componentName": "IstatistiklerIlerlemeAnalizi",
+    "file": "src/screens/IstatistiklerIlerlemeAnalizi.tsx",
+    "buttons": 4,
+    "inputs": 0,
+    "links": 4
+  },
+  {
+    "screenId": "efd3a0ca22c54cd5a8e014390c3200fe",
+    "title": "Ana Sayfa - Alışkanlık Takibi",
+    "componentName": "AnaSayfaAliskanlikTakibi",
+    "file": "src/screens/AnaSayfaAliskanlikTakibi.tsx",
+    "buttons": 10,
+    "inputs": 1,
+    "links": 4
+  }
+]
